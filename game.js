@@ -1,4 +1,3 @@
-
 const dodger=document.getElementById("dodger");
 const ground=document.getElementById("ground");
 var held=false;
@@ -93,8 +92,8 @@ if(free==1){
     
     second.style.display = "none";
   }else{
-   
-     third.style.display = "none";
+
+    third.style.display = "none";
   }
 
     t += u; // move 2px per frame
