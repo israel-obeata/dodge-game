@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        body{
+            background-color: rgb(89, 200, 248);
+        }
+        h1{
+            font-family:monospace;
+            font-weight:bolder;
+            font-size:3rem;
+            margin-top: 20vh;
+            background: linear-gradient(90deg, red,rgb(255, 60, 0), rgb(255, 187, 0),yellow, rgb(233, 253, 50),green,rgb(0, 255, 174),rgb(0, 247, 255));
+            background-size: 400% 400%;
+            -webkit-background-clip: text;   /* makes the background show through text */
+            -webkit-text-fill-color: transparent; /* hides the actual text color */
+             animation: gradientFlow 30s ease infinite;
+            
+        }
+        #title{
+            display: flex;
+            flex-direction: column;
+           align-items: center;
+        }
+        p{
+            margin-top: -1rem;
+        }
+        .button{
+            display:flex;
+            justify-content: center;
+            margin: 4rem;
+           
+        }
+        button{
+            padding: 0.5rem 1rem;
+            border-radius: 50%;
+            background: rgb(10, 40, 80);
+            border:none;
+          
+        }
+        button:active{
+             animation: pop 0.25s ease;
+        }
+        #score{
+            display: flex;
+            justify-content: center;
+
+        }
+        h3{
+            font-family: monospace;
+            font-size: 2rem;
+        }
+        @keyframes pop {
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                 transform: scale(0.85);
+            }
+            100%{
+                 transform: scale(1.5);
+            }
+            
+        }
+        h2{
+            font-family: monospace;
+         font-size:2rem;
+         color: rgb(89, 200, 248);
+        }
+        a{
+            color:green;
+        }
+        @media (max-width:600px) {
+            h1{
+                margin-top: 3rem;
+                padding: 2rem;
+            }
+            #score{margin-top: -2.5rem;}
+        }
+        
+   @keyframes gradientFlow {
+     0% {
+    background-position: 0% 50%;
+    }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+ 
+}
+ a {
+  text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <div id="title">
+         <h1>The dodge game</h1>
+        <p><a href="https://github.com/israel-obeata/dodge-game">Israel's</a> creation.</p> 
+    </div>
+   <div class="button">  <button id="button"><h2>play</h2></button></div>
+   <div id="score"><h3 class="score"></h3></div>
+  
+<script src="./script.js" charset="UTF-8"></script>
+</body>
+</html>

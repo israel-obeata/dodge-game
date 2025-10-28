@@ -1,0 +1,197 @@
+ body{
+  
+ height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+  #57c8f8,  /* same base as menu background */
+  #2b7cff,  /* strong blue accent */
+  #0b1d4e   
+  );
+  background-size: 200% 200%;
+ 
+
+}
+
+
+
+
+
+
+#show{
+  position:fixed;
+  display: flex;
+  justify-self: center;
+ margin-top: 20vh;
+  width:80vw;
+  height:40vh;
+  padding-left: 1rem;
+  
+  
+}
+ 
+  #ground {
+    position:absolute;
+    bottom:30vh;
+    left: 0;
+    width: 100vw;
+    padding-top:0.5rem;
+   
+  }
+  #dodger {
+  
+    height:75px ;
+    width: 75px;
+    border-radius: 50%;
+   background: linear-gradient(135deg, #00fff0, #7b2ff7, #00b4d8);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+    background-size: 400% 400%;
+    animation: change 60s ease infinite;
+    transition: left 0.2s ease;
+    position:absolute;
+     transition: transform 0s; /* instant */
+     will-change: transform;   /* optimization hint */
+  
+  }
+  .obstacles {
+   position: relative;
+    /* or flex-start */
+  width: 100vw;
+ margin-top: -2rem;
+ will-change: transform;
+
+}
+
+ #second{
+  position: fixed;
+  width:33vw; 
+  height: 1.5rem;
+  left:33.5vw;
+
+}
+
+#third{
+position: fixed;
+width:31vw; 
+height: 1.5rem;
+right:3px;
+}
+
+#first{
+   position: fixed;
+  width:31vw; 
+  height: 1.5rem;
+   left:3px ;
+   
+}
+#first, #second, #third {
+  background: linear-gradient(90deg, #39ff14, #a0ff66);
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+
+
+p{  
+  color: #a0f8ff;
+  font-size: 3rem;
+  font-weight:900;
+  font-family: monospace;
+}
+
+#back{
+  position:fixed;
+  top:1rem;
+  left:1rem;
+  border-radius: 4px;
+ background: rgba(10, 40, 80, 0.4);  /* matches text color tone */
+  color: #e8f9ff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+}
+#back:hover {
+  background: rgba(10, 40, 80, 0.7);
+}
+.icon{
+  width:2rem;
+}
+
+.replay {
+  border:none;
+background-color: #00b4d800;
+}
+h1{
+  font-family: monospace;
+  font-size: 4rem;
+  margin-left: 4rem;
+  margin-top: -1rem;
+   background:linear-gradient(90deg, #39ff14, #a0ff66);
+   background-size: 200% 200%;
+            -webkit-background-clip: text;   /* makes the background show through text */
+            -webkit-text-fill-color: transparent; 
+}
+  @media (max-width:600px) {
+    #dodger{
+      height:65px;
+      width:65px;
+    }
+    p{
+      font-size: 40px;
+    }
+    #show{padding-top: 0.5rem;}
+    .icon{
+      width:2rem;
+    }
+    h1{
+       font-size: 3rem;
+      margin-left: 4rem;
+    }
+
+  }
+
+  @media (max-width:400px) {
+    #dodger{
+       height:60px;
+      width:60px;
+    }
+    p{
+      font-size: 30px;
+    }
+    .icon{
+      width:1.5rem;
+    }
+     h1{
+       font-size: 3rem;
+      margin-left: 2rem;
+    }
+
+  }
+@media(max-width:300px){
+   p{
+      font-size: 25px;
+    }
+     h1{
+       font-size: 3rem;
+      margin-left: 1rem;
+    }
+
+}
+
+@keyframes pop {
+  0%{ transform: scale(1);}
+  50%{transform: scale(0.75);}
+  100%{transform:scale(1.5);}
+}
+button:active{
+ animation: pop 0.25s ease;
+}
+
+  @keyframes gradientFlow {
+     0% {
+    background-position: 0% 50%;
+    }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
