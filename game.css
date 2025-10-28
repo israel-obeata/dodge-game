@@ -51,8 +51,13 @@
     position:absolute;
      transition: transform 0s; /* instant */
      will-change: transform;   /* optimization hint */
-  
+   touch-action: none;
+   cursor: grab;
   }
+
+#dodger:active {
+  cursor: grabbing;
+}
   .obstacles {
    position: relative;
     /* or flex-start */
@@ -194,4 +199,5 @@ button:active{
   100% {
     background-position: 0% 50%;
   }
+
 }
