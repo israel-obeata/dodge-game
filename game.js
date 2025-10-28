@@ -38,16 +38,16 @@ dodger.addEventListener("pointerup",(e)=>{
     
 if(present>=(max-parseFloat(styles.width))){
   var wax=(max-parseFloat(styles.width));
- dodger.style.transform = `translate(${wax}px, ${waxY-477}px)`;
+ dodger.style.transform = `translate(${wax}px, ${waxY-467}px)`;
 
 }else if(present<=2){
- dodger.style.transform = `translate(${1}px, ${waxY-477}px)`;  
+ dodger.style.transform = `translate(${1}px, ${waxY-467}px)`;  
 
 
 }else{
 
 
-   dodger.style.transform = `translate(${present-30}px, ${waxY-477}px)`;
+   dodger.style.transform = `translate(${present-30}px, ${waxY-467}px)`;
 
   }
 
@@ -235,6 +235,7 @@ return;
 }
 
 requestAnimationFrame(gameLoop);
+
 
 
 
