@@ -53,6 +53,8 @@
      will-change: transform;   /* optimization hint */
    touch-action: none;
    cursor: grab;
+   -webkit-user-select: none;
+  user-select: none;
   }
 
 #dodger:active {
@@ -201,3 +203,4 @@ button:active{
   }
 
 }
+
