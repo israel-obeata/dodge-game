@@ -181,6 +181,10 @@ h1{
        font-size: 3rem;
       margin-left: 1rem;
     }
+    #dodger{
+      height:70px;
+      width:70px;
+    }
 
 }
 
@@ -194,5 +198,6 @@ button:active{
 }
 
  
+
 
 
