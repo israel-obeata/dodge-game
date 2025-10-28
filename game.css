@@ -1,4 +1,4 @@
- body{
+body{
   
  height: 100vh;
   overflow: hidden;
@@ -8,7 +8,8 @@
   #2b7cff,  /* strong blue accent */
   #0b1d4e   
   );
-  background-size: 200% 200%;
+  background-size: 300% 300%;
+
  
 
 }
@@ -51,10 +52,11 @@
     position:absolute;
      transition: transform 0s; /* instant */
      will-change: transform;   /* optimization hint */
-   touch-action: none;
-   cursor: grab;
-   -webkit-user-select: none;
+  touch-action: none;
+  cursor: grab;
+ -webkit-user-select: none;
   user-select: none;
+
   }
 
 #dodger:active {
@@ -191,3 +193,4 @@ button:active{
  animation: pop 0.25s ease;
 }
 
+ 
